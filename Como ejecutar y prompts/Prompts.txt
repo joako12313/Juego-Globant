@@ -1,0 +1,511 @@
+PROMPTS USADOS — SHADOW
+Versión Python 3 + Pygame
+
+============================================================
+PROMPT 1 — IDEA INICIAL DE SHADOW
+============================================================
+
+Quiero crear un juego 2D simple en Python usando Pygame.
+
+El juego se llama SHADOW.
+
+La idea principal es que el jugador controla un personaje y tiene una sombra que repite sus movimientos con unos segundos de retraso.
+
+La sombra no es un enemigo y no debe matar al jugador. La sombra es una herramienta para resolver puzzles.
+
+El jugador debe aprovechar el retraso de la sombra para hacer que ella llegue a determinados lugares, active interruptores, abra puertas o ayude a superar obstáculos.
+
+El juego debe ser simple de jugar, pero tener niveles que hagan pensar al jugador.
+
+Quiero que tenga:
+
+- Movimiento con WASD o flechas.
+- Plataformas y obstáculos.
+- Interruptores.
+- Puertas.
+- Estrellas para recoger.
+- Una salida al final.
+- Varios niveles.
+- Reinicio con R.
+- Pausa con ESC.
+- Menú principal.
+- Selección de niveles.
+- Pantalla de victoria.
+
+La sombra debe reproducir los movimientos que el jugador realizó anteriormente. No debe tener inteligencia artificial para perseguir al jugador.
+
+Quiero que el juego sea desarrollado completamente con Python 3 y Pygame, sin utilizar un motor externo.
+
+
+============================================================
+PROMPT 2 — MECÁNICA DE LA SOMBRA
+============================================================
+
+Desarrollá la mecánica principal de SHADOW.
+
+El jugador debe moverse normalmente y el juego debe registrar sus movimientos.
+
+La sombra debe reproducir esos movimientos aproximadamente 3 segundos después.
+
+La sombra debe ser una reproducción de los movimientos anteriores del jugador.
+
+No quiero que la sombra:
+
+- Persiga al jugador.
+- Tenga inteligencia artificial.
+- Cambie de dirección por su cuenta.
+- Se teletransporte.
+- Acelere artificialmente.
+- Ataque.
+- Mate al jugador.
+
+La sombra solamente debe repetir el recorrido que hizo anteriormente el jugador.
+
+La mecánica debe servir para resolver puzzles.
+
+Por ejemplo:
+
+1. El jugador realiza un recorrido.
+2. Después de unos segundos la sombra comienza a repetirlo.
+3. El jugador realiza otro recorrido.
+4. La sombra llega a un interruptor.
+5. El interruptor abre una puerta.
+6. El jugador puede utilizar esa puerta para avanzar.
+
+La mecánica debe estar implementada de forma clara y estable en Pygame.
+
+
+============================================================
+PROMPT 3 — NIVELES Y PUZZLES
+============================================================
+
+Creá niveles para SHADOW utilizando la mecánica de la sombra.
+
+Cada nivel debe tener un diseño lógico y no debe estar lleno de objetos sin utilidad.
+
+Los niveles deben incluir progresivamente:
+
+- Plataformas.
+- Obstáculos.
+- Interruptores.
+- Puertas.
+- Plataformas móviles.
+- Caminos alternativos.
+- Estrellas.
+- Una salida final.
+
+Cada nivel debe tener 3 estrellas obligatorias.
+
+El jugador debe conseguir las 3 estrellas para poder desbloquear la puerta final.
+
+La sombra no puede recoger estrellas.
+
+Los interruptores pueden ser activados tanto por el jugador como por la sombra.
+
+La dificultad debe aumentar mediante el diseño de los puzzles y no haciendo que la sombra sea artificialmente más rápida.
+
+Los primeros niveles deben enseñar la mecánica.
+
+Los niveles posteriores deben exigir que el jugador piense con anticipación y utilice el recorrido anterior de la sombra.
+
+
+============================================================
+PROMPT 4 — ESTRELLAS Y PUERTA FINAL
+============================================================
+
+Agregá al juego un sistema de 3 estrellas obligatorias por nivel.
+
+Las estrellas deben estar ubicadas en diferentes partes del nivel.
+
+Cuando el jugador toca una estrella:
+
+- La estrella desaparece.
+- Se reproduce una pequeña animación.
+- El contador de estrellas aumenta.
+
+La sombra no puede recoger estrellas.
+
+El HUD debe mostrar algo como:
+
+ESTRELLAS: 0/3
+
+Cuando el jugador consiga las tres:
+
+ESTRELLAS: 3/3
+
+la puerta final debe desbloquearse.
+
+La puerta puede tener una pequeña animación al desbloquearse.
+
+Antes de conseguir las 3 estrellas, la puerta debe permanecer bloqueada.
+
+Después de conseguir las 3 estrellas, el jugador debe llegar hasta la puerta para completar el nivel.
+
+
+============================================================
+PROMPT 5 — INTERRUPTORES Y PUERTAS
+============================================================
+
+Implementá un sistema de interruptores y puertas.
+
+Los interruptores pueden ser activados por:
+
+- El jugador.
+- La sombra.
+
+Cuando un interruptor se activa puede:
+
+- Abrir una puerta.
+- Activar una plataforma.
+- Desactivar un obstáculo.
+- Cambiar el camino disponible.
+
+La activación debe tener una respuesta visual para que el jugador entienda que el mecanismo funcionó.
+
+La sombra debe poder activar mecanismos porque forma parte de los puzzles.
+
+Los objetos deben estar colocados de manera lógica y tener una función dentro del nivel.
+
+
+============================================================
+PROMPT 6 — MENÚ Y PANTALLAS
+============================================================
+
+Agregá las siguientes pantallas al juego SHADOW:
+
+1. Menú principal.
+2. Selección de niveles.
+3. Juego.
+4. Pausa.
+5. Victoria.
+
+Menú principal:
+
+- JUGAR
+- SELECCIONAR NIVEL
+- SALIR
+
+Selección de niveles:
+
+Mostrar los niveles disponibles y permitir seleccionar solamente los niveles desbloqueados.
+
+Pausa:
+
+- CONTINUAR
+- REINICIAR
+- VOLVER AL MENÚ
+
+Victoria:
+
+- SIGUIENTE NIVEL
+- REPETIR NIVEL
+- VOLVER AL MENÚ
+
+El diseño debe ser oscuro, simple y minimalista.
+
+
+============================================================
+PROMPT 7 — CONTROLES
+============================================================
+
+Implementá estos controles:
+
+WASD o flechas:
+Mover al jugador.
+
+R:
+Reiniciar el nivel.
+
+ESC:
+Pausar el juego.
+
+Los controles deben ser simples y responder correctamente.
+
+
+============================================================
+PROMPT 8 — ESTILO VISUAL
+============================================================
+
+Quiero que SHADOW tenga un estilo visual 2D oscuro y minimalista.
+
+El jugador debe distinguirse claramente de la sombra.
+
+La sombra debe tener un aspecto oscuro/transparente o visualmente diferente.
+
+Usar formas simples de Pygame si no hay imágenes externas.
+
+Agregar pequeñas animaciones y efectos para:
+
+- Recoger estrellas.
+- Activar interruptores.
+- Abrir puertas.
+- Completar niveles.
+- Cambiar de pantalla.
+
+No utilizar recursos externos obligatorios.
+
+El juego debe verse ordenado y entendible.
+
+
+============================================================
+PROMPT 9 — ESTRUCTURA DEL PROYECTO
+============================================================
+
+Organizá el proyecto SHADOW de esta manera:
+
+SHADOW/
+│
+├── main.py
+├── game.py
+├── player.py
+├── shadow.py
+├── level.py
+├── objects.py
+│
+├── levels/
+│   ├── level1.py
+│   ├── level2.py
+│   └── ...
+│
+└── assets/
+    ├── images/
+    └── sounds/
+
+Cada archivo debe tener una función clara.
+
+main.py:
+Inicio del juego.
+
+game.py:
+Lógica general y estados del juego.
+
+player.py:
+Movimiento y comportamiento del jugador.
+
+shadow.py:
+Grabación y reproducción de movimientos de la sombra.
+
+level.py:
+Carga y administración de niveles.
+
+objects.py:
+Puertas, estrellas, interruptores, plataformas y otros objetos.
+
+levels/:
+Diseño de cada nivel.
+
+assets/:
+Imágenes y sonidos opcionales.
+
+
+============================================================
+PROMPT 10 — GUARDADO
+============================================================
+
+Agregá un sistema de guardado utilizando JSON.
+
+El juego debe poder guardar:
+
+- Nivel actual.
+- Niveles desbloqueados.
+- Estrellas conseguidas.
+- Configuraciones necesarias.
+
+Crear un archivo:
+
+save.json
+
+Ejemplo:
+
+{
+    "nivel_actual": 1,
+    "niveles_desbloqueados": 1,
+    "estrellas": {}
+}
+
+El guardado debe realizarse automáticamente cuando corresponda.
+
+Si el archivo no existe, el juego debe crear un progreso nuevo.
+
+
+============================================================
+PROMPT 11 — PROGRESIÓN DE NIVELES
+============================================================
+
+Diseñá una progresión de dificultad para SHADOW.
+
+Nivel 1:
+Presentar el movimiento del jugador y la sombra.
+
+Nivel 2:
+Introducir las 3 estrellas y un interruptor.
+
+Nivel 3:
+Utilizar la sombra para activar mecanismos.
+
+Nivel 4:
+Agregar puertas y caminos alternativos.
+
+Nivel 5:
+Agregar plataformas móviles.
+
+A partir de los siguientes niveles:
+
+- Combinar diferentes mecanismos.
+- Crear recorridos más complejos.
+- Hacer que el jugador tenga que planificar sus movimientos.
+- Utilizar el retraso de la sombra como parte fundamental del puzzle.
+
+No aumentar la dificultad simplemente haciendo que la sombra sea más rápida.
+
+
+============================================================
+PROMPT 12 — PROMPT GENERAL PARA COPILOT
+============================================================
+
+Creá un juego completo llamado SHADOW utilizando Python 3 y Pygame.
+
+Es un juego 2D de plataformas y puzzles.
+
+La mecánica principal es que el jugador tiene una sombra que reproduce los movimientos que realizó aproximadamente 3 segundos antes.
+
+La sombra NO es un enemigo.
+
+La sombra NO persigue al jugador.
+
+La sombra NO mata al jugador.
+
+La sombra NO tiene inteligencia artificial.
+
+La sombra simplemente reproduce los movimientos registrados del jugador.
+
+El objetivo del jugador es utilizar esa mecánica para resolver puzzles.
+
+Cada nivel debe tener:
+
+- Jugador.
+- Sombra.
+- 3 estrellas.
+- Plataformas.
+- Obstáculos.
+- Interruptores.
+- Puertas.
+- Plataformas móviles.
+- Caminos alternativos.
+- Puerta final.
+
+El jugador debe conseguir las 3 estrellas.
+
+Las estrellas desaparecen al recogerlas y actualizan el HUD.
+
+La sombra no puede recoger estrellas.
+
+La puerta final comienza bloqueada.
+
+Al conseguir las 3 estrellas, la puerta final se desbloquea.
+
+El jugador debe llegar a la puerta para completar el nivel.
+
+Los interruptores pueden ser activados por el jugador o por la sombra.
+
+El juego debe tener:
+
+- Menú principal.
+- Selección de niveles.
+- Juego.
+- Pausa.
+- Victoria.
+- Guardado mediante JSON.
+- Reinicio con R.
+- Pausa con ESC.
+- Movimiento con WASD o flechas.
+
+El estilo debe ser oscuro, minimalista y simple.
+
+Utilizar Pygame sin motores externos.
+
+Crear una estructura de código organizada y modular.
+
+Los niveles deben estar diseñados con lógica y tener dificultad progresiva.
+
+No agregar mecánicas innecesarias.
+
+No convertir a la sombra en un enemigo.
+
+El objetivo es que la sombra sea una herramienta para resolver los puzzles.
+
+
+============================================================
+PROMPT 13 — CORRECCIÓN DE LA IDEA DE LA SOMBRA
+============================================================
+
+IMPORTANTE:
+
+No quiero la versión donde la sombra persigue al jugador ni donde la sombra mata al jugador.
+
+Volver a la idea original.
+
+La sombra es una copia retrasada de los movimientos del jugador.
+
+El jugador debe utilizar la sombra para resolver los niveles.
+
+La sombra es un elemento de puzzle, no un enemigo.
+
+Mantener la mecánica de aproximadamente 3 segundos de retraso.
+
+No agregar persecución, ataques, daño ni muerte.
+
+
+============================================================
+PROMPT 14 — VERSIÓN SIMPLE DEL JUEGO
+============================================================
+
+Quiero que SHADOW sea un juego simple de desarrollar y jugar.
+
+No agregar sistemas demasiado complejos.
+
+La mecánica principal debe seguir siendo:
+
+JUGADOR → REALIZA MOVIMIENTOS → ESPERA → SOMBRA REPITE LOS MOVIMIENTOS
+
+El desafío debe estar en pensar dónde debe pasar el jugador para que después la sombra pueda activar los mecanismos necesarios.
+
+Utilizar niveles pequeños y claros.
+
+Cada nivel debe tener un objetivo concreto.
+
+Mantener el código organizado y fácil de modificar.
+
+
+============================================================
+PROMPT 15 — REVISIÓN FINAL
+============================================================
+
+Revisá todo el proyecto SHADOW y asegurate de que:
+
+- El juego inicia correctamente.
+- El jugador se puede mover.
+- La sombra reproduce los movimientos con retraso.
+- La sombra no persigue al jugador.
+- La sombra no mata al jugador.
+- Las estrellas funcionan.
+- El contador de estrellas funciona.
+- Los interruptores funcionan.
+- Las puertas funcionan.
+- La puerta final permanece bloqueada hasta conseguir 3 estrellas.
+- La puerta final se abre con 3/3 estrellas.
+- Los niveles se pueden completar.
+- El reinicio con R funciona.
+- La pausa con ESC funciona.
+- El menú funciona.
+- La selección de niveles funciona.
+- El guardado JSON funciona.
+- No hay errores al ejecutar el proyecto.
+
+No cambies la mecánica principal del juego.
+
+No agregues sistemas innecesarios.
+
+============================================================
+FIN DE LOS PROMPTS — SHADOW PYTHON + PYGAME
+============================================================
