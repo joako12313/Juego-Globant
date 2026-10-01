@@ -1,0 +1,37 @@
+Cómo ejecutar SHADOW en Windows
+Requisitos
+
+Python 3 instalado.
+
+Conexión a internet durante la instalación de Pygame.
+Preparación
+
+1.Abrí la carpeta del proyecto juego sombra en VS Code.
+
+2.Abrí una terminal en VS Code desde Terminal → Nueva terminal.
+
+3.Creá un entorno virtual:
+
+py -m venv .venv
+
+4.Instalá las dependencias:
+
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+
+5.Iniciar el juego
+
+Ejecutalo desde la terminal, estando dentro de la carpeta del proyecto:
+
+.\.venv\Scripts\python.exe main.py
+
+Se abrirá la ventana del juego. Para cerrarlo, usá la opción Salir del menú o cerrá la ventana.
+
+Controles
+A/D o flechas izquierda/derecha: mover al personaje.
+Espacio, W o flecha arriba: saltar.
+R: reiniciar el nivel.
+Esc: pausar o reanudar.
+Mecánicas principales
+La sombra repite el recorrido del personaje con 3 segundos de retraso. Ayuda a activar interruptores y mecanismos, distrae a algunas patrullas y el personaje puede pararse sobre ella. La sombra no mata al personaje. Los pinchos, enemigos y caídas sí pueden causar una muerte y reiniciar desde el punto de control disponible.
+
+Cada nivel tiene tres estrellas. Al recogerlas con el personaje, se desbloquea la salida.
